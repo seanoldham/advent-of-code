@@ -44,23 +44,22 @@ let input =
 
 inputArray = input.split("");
 
-console.log(inputArray);
-
-var sum = 0;
+var sum1 = 0;
+var sum2 = 0;
 
 for (i = 0; i < inputArray.length; i++) {
   let element = parseInt(inputArray[i]);
   if (element == parseInt(inputArray[(i + 1) % inputArray.length])) {
-    sum += element;
+    sum1 += element;
   }
 
   if (
     element ==
     parseInt(inputArray[(i + inputArray.length / 2) % inputArray.length])
   ) {
-    sum += element;
+    sum2 += element;
   }
 }
 
-console.log(sum);
-console.log(inputArray.length);
+console.log(sum1);
+console.log(sum2);
